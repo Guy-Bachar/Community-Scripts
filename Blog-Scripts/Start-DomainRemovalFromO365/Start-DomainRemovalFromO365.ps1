@@ -69,10 +69,10 @@ Write-Host ", Found: $($MailUsers.Count)" -ForegroundColor Green
 
 #------------------------------------------------------------------------------------------
 # Domains:
-#   Domain1 - nwyhyok.com
+#   Domain1 - domain.com
 #------------------------------------------------------------------------------------------
 Write-Host "[Phase 4] - Domain Filtering, Identification and Default Domain Set" -ForegroundColor Magenta
-$DomainToRemove = "polymerlogistics.com"
+$DomainToRemove = "Domain.com"
 $TenantDomain = (Get-MsolDomain | Where { $_.Name -like "*.onmicrosoft.com" -and $_.Name -notlike "*.mail.onmicrosoft.com" }).Name
 
 #------------------------------------------------------------------------------------------
